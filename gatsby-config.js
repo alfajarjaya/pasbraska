@@ -6,10 +6,9 @@ require('dotenv').config({
 const config = {
   siteMetadata: {
     title: `Website Presensi`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.pasbraska.netlify.app`,
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     {
