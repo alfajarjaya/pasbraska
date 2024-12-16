@@ -119,7 +119,6 @@ export const getDataPresensiNow = async (role) => {
         }
         return { success: false, error: res.data.message || "Failed to fetch data." };
     } catch (error) {
-        console.error("Error fetching data:", error);
         return { success: false, error: "An error occurred while fetching data." };
     }
 };

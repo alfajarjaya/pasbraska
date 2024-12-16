@@ -18,9 +18,9 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
 
 // Fungsi untuk mengecek lokasi
 export function checkLocation() {
-    const allowedLatitude = -7.313873; // Koordinat area yang diizinkan
-    const allowedLongitude = 112.731657;
-    const allowedRadius = 300000; // Radius dalam meter (harus positif)
+    const allowedLatitude = -7.470614542904785; // Koordinat area yang diizinkan
+    const allowedLongitude = 112.4564063995055;
+    const allowedRadius = 500; // Radius dalam meter (harus positif)
 
     return new Promise((resolve, reject) => {
         if (navigator.geolocation) {
@@ -37,7 +37,6 @@ export function checkLocation() {
                         allowedLongitude
                     );
 
-                    // Pengecekan lokasi
                     if (distance <= allowedRadius) {
                         resolve(true); // Lokasi valid
                     } else {
@@ -45,7 +44,6 @@ export function checkLocation() {
                     }
                 },
                 (error) => {
-                    console.error("Error Geolocation:", error);
                     reject(error);
                 },
                 { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 } // Akurasi tinggi
